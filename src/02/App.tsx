@@ -13,30 +13,30 @@ function App() {
   console.log('App rendering')
   return (
       <div className="App">
-        <AppTitle />
-        <Rating />
-        <Accordion />
-        <Rating />
+        <AppTitle/>
+        <Rating/>
+        <Accordion/>
+        <Rating/>
       </div>
   );
 }
 
-function AppTitle () {
+function AppTitle() {
   console.log('AppTitle rendering')
   return (
       <>This is APP component</>
   );
 }
 
-function Rating ()  {
+function Rating() {
   console.log('Rating rendering')
   return (
       <div>
-        <Star />
-        <Star />
-        <Star />
-        <Star />
-        <Star />
+        <Star/>
+        <Star/>
+        <Star/>
+        <Star/>
+        <Star/>
       </div>
   );
 }
@@ -54,15 +54,17 @@ function Accordion() {
   console.log('Accordion rendering')
   return (
       <div>
-        <AccordionTitle />
-        <AccordionBody />
+        <AccordionTitle/>
+        <AccordionBody/>
       </div>
   );
 }
+
 function AccordionTitle() {
   console.log('AccordionTitle rendering')
   return <h3>Меню</h3>;
 }
+
 function AccordionBody() {
   console.log('AccordionBody rendering')
   return (
