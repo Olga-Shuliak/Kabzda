@@ -29,8 +29,8 @@ function App() {
         <Rating value={4}/>
         <Rating value={5}/>
 Article 3
-        <OnOff on={true}/>
-        <OnOff on={false}/>
+        <OnOff />
+        <OnOff />
       </div>
   );
 }
