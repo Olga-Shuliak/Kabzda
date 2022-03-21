@@ -3,6 +3,8 @@ import './App.css';
 import Accordion from './components/Accordion/Accordion';
 import {Rating} from './components/Rating/Rating';
 import {OnOff} from './components/OnOff/OnOff';
+import {UnControledAccordion} from './components/UnControledAccordion/UnControledAccordion';
+import {UncontrolledRating} from './components/Rating/UncontrolledRating';
 
 // function hello() {
 //   debugger
@@ -28,9 +30,13 @@ function App() {
         <Rating value={3}/>
         <Rating value={4}/>
         <Rating value={5}/>
-Article 3
-        <OnOff />
-        <OnOff />
+        Article 3
+        <OnOff/>
+        <OnOff/>
+        Article 4
+        <UnControledAccordion title={'New menu'}/>
+        Article 5
+        <UncontrolledRating />
       </div>
   );
 }
