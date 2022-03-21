@@ -1,4 +1,6 @@
 import React from 'react';
+import classes from './Accordion.module.css';
+
 
 type AccordionPropsType = {
   title: string
@@ -7,20 +9,13 @@ type AccordionPropsType = {
 
 function Accordion(props: AccordionPropsType) {
   console.log('Accordion rendering')
-  if (props.collapsed) {
+
     return (
-        <div>
+        <div className={classes.menuBox}>
           <AccordionTitle titleValue={props.title}/>
-          <AccordionBody/>
+          { !props.collapsed && <AccordionBody/>}
         </div>
     );
-  } else {
-    return (
-        <div>
-          <AccordionTitle titleValue={props.title}/>
-        </div>
-    );
-  }
 
 }
 
@@ -33,9 +28,9 @@ function AccordionBody() {
   console.log('AccordionBody rendering')
   return (
       <ul>
-        <li>1</li>
-        <li>2</li>
-        <li>3</li>
+        <li>Messages</li>
+        <li>Photo</li>
+        <li>Video</li>
       </ul>
   );
 }
