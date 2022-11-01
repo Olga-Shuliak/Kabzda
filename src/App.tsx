@@ -5,17 +5,26 @@ import {Rating} from './components/Rating/Rating';
 import {OnOff} from './components/OnOff/OnOff';
 import {UnControledAccordion} from './components/UnControledAccordion/UnControledAccordion';
 import {UncontrolledRating} from './components/Rating/UncontrolledRating';
+import {ControlledSelect} from './components/Select/ControlledSelect';
+import {GetValueOfUncontroledInputByButtonPress, UncontroledInput} from './components/Input/UnControledInput';
+import {ControlledInput} from './components/Input/ControlledInput';
+import {ControlledCheckbox} from './components/Checkbox/ControlledCheckbox';
 
-// function hello() {
-//   debugger
-//   alert('Hello IT-Kamasutra!')
-// }
-//
-// hello();
+
+type PageTitleProps = {
+  title: string
+}
+
+function PageTitle(props: PageTitleProps) {
+  console.log('PageTitle rendering')
+  return (
+      <h1>{props.title}</h1>
+  );
+}
+
 
 function App() {
-  //return возвращает 1 элемент (div)
-  console.log('App rendering')
+
   return (
       <div className="App">
         <PageTitle title={'This is APP component'}/>
@@ -37,19 +46,17 @@ function App() {
         <UnControledAccordion title={'New menu'}/>
         Article 5
         <UncontrolledRating />
+        Article 6
+        <UncontroledInput/>
+        Ref
+        <GetValueOfUncontroledInputByButtonPress/>
+        ControlledInput
+        <ControlledInput/>
+        ControlledCheckbox
+        <ControlledCheckbox/>
+        ControlledSelect
+        <ControlledSelect/>
       </div>
-  );
-}
-
-
-type PageTitleProps = {
-  title: string
-}
-
-function PageTitle(props: PageTitleProps) {
-  console.log('PageTitle rendering')
-  return (
-      <h1>{props.title}</h1>
   );
 }
 
